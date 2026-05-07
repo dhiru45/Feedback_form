@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <main class="container">
+        <div class="form-wrapper glass-panel">
+            <header class="form-header">
+                <h1>Submit Your Complaint</h1>
+                <p>We value your feedback to improve our services.</p>
+            </header>
+            
+            <form id="complaintForm" onsubmit="return false;">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                
+                <div class="input-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required placeholder="New York">
+                </div>
+                
+                <div class="input-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" required placeholder="+1 234 567 8900" pattern="[\+]?[0-9\s\-\(\)]+">
+                </div>
+                
+                <div class="input-group">
+                    <label for="complaint">Complaint / Feedback</label>
+                    <textarea id="complaint" name="complaint" required placeholder="Please describe your issue here..." rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span>Submit</span>
+                    <div class="spinner" id="submitSpinner"></div>
+                </button>
+
+                <div id="statusMessage" class="status-message"></div>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
